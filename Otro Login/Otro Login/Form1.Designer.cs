@@ -90,6 +90,7 @@
             this.clave.Name = "clave";
             this.clave.Size = new System.Drawing.Size(370, 23);
             this.clave.TabIndex = 4;
+            this.clave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Clave_KeyPress);
             // 
             // inicio
             // 
@@ -126,6 +127,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

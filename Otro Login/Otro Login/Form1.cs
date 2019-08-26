@@ -32,6 +32,10 @@ namespace Otro_Login
             if(usuario.Text=="Juancho"&& clave.Text=="123tamarindo")
             {
                 MessageBox.Show("Hola Don Juancho");
+                this.Hide();
+                Ventana_2 CursosVenta = new Ventana_2();
+                CursosVenta.Show();
+                this.Visible = false;
             }
             else
             {
@@ -42,5 +46,46 @@ namespace Otro_Login
             }
                 
         }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Clave_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if((int)e.KeyChar==(int)Keys.Enter)
+            {
+                if (usuario.Text == "Juancho" && clave.Text == "123tamarindo")
+                {
+                    MessageBox.Show("Hola Don Juancho");
+                    this.Hide();
+                    Ventana_2 CursosVenta = new Ventana_2();
+                    CursosVenta.Show();
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Fuera de aqui infiltrado");
+                    usuario.Text = "";
+                    clave.Text = "";
+                    usuario.Focus();
+
+                }
+              
+            }
+
+        }
+        
+        }
+
+
+
+
+
+
+
+
+
     }
 }
